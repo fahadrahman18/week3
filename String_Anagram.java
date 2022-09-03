@@ -18,39 +18,40 @@ public class String_Anagram {
 	 * 
 	 */
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+		public static void main(String[] args) {
 		String text1 = "stops";
 		String text2 = "potss";
-		char[] ch1;
-		char[] ch2;
+		char[] charArray1 = null;
+		char[] charArray2 = null;
+		
+		int len1 = text1.length();
+		int len2 = text2.length();
+		
+		if (len1 == len2) {
+			charArray1 = text1.toCharArray();
+			charArray2 = text2.toCharArray();		
 		
 		
-		int size1 = text1.length();
-		int size2 = text2.length();
+		System.out.println(charArray1);
+		System.out.println(charArray2);
 		
-		if (size1 == size2) {
-			
-		ch1 = text1.toCharArray();
-		ch2 = text2.toCharArray();
+		//sort compares string as based on ASCII value, so s & S - both are different value as per Arrays sort
+		Arrays.sort(charArray1);
+		Arrays.sort(charArray2);
 		
-		Arrays.sort(ch1);
-		Arrays.sort(ch2);
-		
-		//if (Arrays.equals(ch1, ch2))
-		
-		if (Arrays.equals(ch1, ch2)) {
-			System.out.println("Anagram");
+		System.out.println(charArray1);
+		System.out.println(charArray2);
+		if (Arrays.equals(charArray1, charArray2)) {
+			System.out.println("Strings are Anagram");
 		}
 		else {
-			System.out.println("Not Anagram");
+			System.out.println("Strings are not a Anagram");
 		}
-			
 		}
-
+		else {
+			System.out.println("Strings are not a Anagram");
+		}
+		}
 	}
-	
-}
 
 
